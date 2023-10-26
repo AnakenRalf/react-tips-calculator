@@ -1,13 +1,150 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&family=Manrope:wght@200;400;600&family=Noto+Sans+Mono:wght@100;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  background-color: #ecf0f3;
+
+  font-size: 62.5%;
+}
+
+.form {
+  position: relative;
+  width: 800px;
+  height: 550px;
+  padding: 40px 35px 35px 35px;
+
+  background-color: #ecf0f3;
+  border-radius: 40px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.spended {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 10px 5px 5px 5px;
+}
+.input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px 10px 20px 10px;
+  /* border-bottom: 1px solid #555; */
+  font-size: 1.9rem;
+
+  color: #555;
+
+  border-radius: 25px;
+  margin-bottom: 20px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield; /* Firefox */
+  cursor: pointer;
+}
+
+.label-perperson-sat {
+  display: block;
+  font-size: 1rem;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 10px 14px 15px;
+  border: 1px solid #dddddd;
+  font-size: 1.4rem;
+  color: #555;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  /* box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px white; */
+}
+
+.clear-btn {
+  margin: 30px 0;
+  font-size: medium;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 6px 5px 10px #cbced1, -4px -4px 10px white;
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  padding-left: 30px;
+  border-left: #e0e0e0 1px solid;
+}
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 10px 5px 5px 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pay-check {
+  font-size: 10rem;
+  margin: 40px 0px 40px 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.explain {
+  text-align: center;
+  font-size: 1.2rem;
 }
